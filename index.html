@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+
+<title>
+    Welcome!
+</title>
+
+</head>
+
+<body>
+    
+    <nav id="desktop-nav">
+        <div class="logo"><a href="#home">LYNC</a></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#experience">EXPERIENCES</a></li>
+                <li><a href="#contacts">CONTACTS</a></li>
+            </ul> 
+        </div>
+    </nav>
+
+    <nav id="mobile-nav">
+        <div class="logo">LYNC</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#home" onclick="toggleMenu()">HOME</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">PROJECTS</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">EXPERIENCES</a></li>
+                <li><a href="#contacts" onclick="toggleMenu()">CONTACTS</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section_pic-container">
+            <img src="./assets/profile.jpeg" alt="Me" class="img-pic-profile">
+        </div>
+
+        <div class="section_text">
+            <p class="section_text_p1">Hello, I'm</p>
+            <h1 class="title" >Lyncon Fernandez
+            </h1>
+            <p class="section_text_p2">Web Developer</p> 
+        
+
+        <div class="btn-container">
+            
+        
+            <button class="pushable" onclick="window.open('./assets/SAMPLE_RESUME.pdf')">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front">DOWNLOAD CV</span>
+              </button>
+
+            <button class="pushable" onclick="location.href='#contacts'">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front">CONTACT INFO</span>
+              </button>
+        
+        </div>
+
+            <div id="socials-container">
+                <img src="./assets/icons/linkedin.png" alt="linkedin" class="icon" onclick="window.open('https://www.linkedin.com/in/lyncon-fernandez-7aa547243')">
+                <img src="./assets/icons/github.png" alt="github" class="icon" onclick="window.open('https://github.com/lync10')">
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="about">
+        
+        <div class="card">
+            <div class="about-left">
+            <div class="picture-about">
+                <img src="./assets/profile.jpeg" alt="Me" class="img-pic-about">
+            </div>
+            </div>
+
+            <div class="about-right">
+            <h1>ABOUT ME</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                 but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="tech-stack">
+        <div class="card tech-card-mod"> <h1>TECH STACK</h1>
+            
+            <div class="icon-grid">
+                 <div class="icon-card">
+                    <img src="./assets/icons/HTML5.png" alt="HTML Icon">
+                    <p>HTML</p>
+                </div>
+                <div class="icon-card">
+                    <img src="./assets/icons/CSS.png" alt="CSS Icon">
+                    <p>CSS</p>
+                </div>
+                <div class="icon-card">
+                    <img src="./assets/icons/JS.png" alt="JS Icon">
+                    <p>JavaScript</p>
+                </div>
+                <div class="icon-card">
+                    <img src="./assets/icons/linux.png" alt="Linux Icon">
+                    <p>Linux</p>    
+                </div>
+                <div class="icon-card">
+                    <img src="./assets/icons/docker.png" alt="Docker Icon">
+                    <p>Docker</p>
+                </div>
+                <div class="icon-card">
+                    <img src="./assets/icons/cloudflare.png" alt="Cloudflare Icon">
+                    <p>Cloudflare</p>
+                </div>
+                <div class="icon-card">
+                    <img src="./assets/icons/Figma.png" alt="Figma Icon">
+                    <p>Figma</p>
+                </div>
+                <div class="icon-card">
+                    <img src="./assets/icons/PHP.png" alt="PHP Icon">
+                    <p>PHP</p>
+                </div>
+                <div class="icon-card">
+                    <img src="./assets/icons/mysql.png" alt="MySQL Icon">
+                    <p>MySQL</p>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    
+
+
+    <section id="experiences">
+        
+    </section>
+
+
+
+</body>
+</html>

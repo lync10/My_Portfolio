@@ -1,0 +1,540 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* --- GLOBAL SELECTION AND FOCUS FIXES (To prevent copy artifacts/yellow squares) --- */
+a:focus,
+button:focus,
+.icon:focus,
+.pushable:focus,
+*:focus {
+    /* Removes all default browser outlines/focus rings */
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+::selection {
+    /* Custom highlight color when text is selected */
+    background: #D64933;
+    color: #F1F2EB;
+}
+
+/* ------------------------------------------------------------------- */
+
+body{
+    font-family: "Boldonse", system-ui;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    color: #252323;
+}
+
+.logo{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a,
+.btn{
+    transition: all 300ms ease;
+}
+
+nav,
+.nav-links{
+    display: flex;
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color:#F1F2EB
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1rem;
+}
+
+a{
+    color: #252323;
+    text-decoration: none;
+}
+
+/* HAMBURGER MENU*/
+#mobile-nav{
+    display: none;
+}
+
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVENESS (Hamburger Menu)*/
+@media screen and (max-width: 1200px){
+    #desktop-nav{
+        display: none;
+    }
+    #mobile-nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 10vh;
+        background-color:#F1F2EB;
+    }
+}
+/* END OF MOBILE RESPONSIVENESS */
+
+.hamburger-icon span{
+    width: 100%;
+    height: 5px;
+    background-color: #D64933;
+    transition: all 500ms ease-in-out;
+}
+
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #F1F2EB;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+}
+
+.menu-links a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #252323;
+    text-decoration: none;
+    transition: all 0.3ms ease-in-out;
+}
+
+.menu-links li{
+    list-style: none;
+}
+
+.menu-links.open{
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(8px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(9px, -5px);
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+section{
+    /* height: 100vh; */ /* Removed for better control via min-height/padding */
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container{
+    display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    height: 90vh; /* Reduced from 100vh to account for 10vh nav */
+    padding-top: 5vh; /* Center content vertically */
+    padding-bottom: 5vh;
+}
+
+.section_pic-container{
+    display: flex;
+}
+
+.img-pic-profile{
+    height: 30vh;
+    width: 30vh;
+    margin: auto 0;
+    border-radius: 90%;
+}
+
+/* RESPONSIVENESS PROFILE PIC*/
+@media screen and (max-width: 800px){
+    #profile{
+        flex-direction: column;
+        height: auto; /* Allow height to collapse on small screens */
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        gap: 2rem;
+    }
+
+    .section_pic-container{
+        align-self: center;
+    }
+}
+/* END OF RESPONSIVE PROFILE PIC*/
+
+.section_text{
+    align-self: center;
+    text-align: center;
+}
+
+.section_text p {
+    font-weight: 600;
+}
+
+.section_text_p1{
+    text-align: center;
+}
+
+.section_text_p1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #D64933;
+}
+
+.section_text_p2{
+    color: #D64933;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socials-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* ICONS */
+.icon{
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* BUTTONS */
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* FANCY BUTTON */
+.pushable {
+    margin-top: 1.5rem;
+    position: relative;
+    background: transparent;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    /* Removed fixed outline styles */
+    transition: filter 250ms;
+    -webkit-tap-highlight-color: rgba(247, 0, 0, 0);
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: hsl(226, 25%, 69%);
+    border-radius: 8px;
+    filter: blur(2px);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background: #7C7C7C;
+}
+
+.front {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    background: #F1F2EB;
+    padding: 16px 32px;
+    color: #252323;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.7rem;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+    font-family: "Boldonse", system-ui;
+}
+
+.front:hover{
+    background: #D64933;
+}
+
+.pushable:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* END OF FANCY BUTTON */
+
+
+/*START OF ADAPTIVE ABOUT */
+
+
+#about{
+    /* background-color: #7C7C7C; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; 
+    height: auto; /* Allow height to expand if content is larger than 50vh */
+    padding: 2rem 0; /* Add back vertical padding for breathing room */
+}
+
+.card{
+    background-color: #F1F2EB;
+    border-radius: 8px;
+
+    /* Adaptive Centering */
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.card h1{
+    color: #D64933;
+    margin-bottom: 1rem;
+}
+
+.picture-about{
+    width: 100%;
+}
+
+.card .img-pic-about{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+.about-left{
+    width: 30%;
+    min-width: 180px;
+    flex-shrink: 0;
+}
+
+.about-right{
+    width: 70%;
+    padding: 0;
+}
+
+/* CARD MOBILE RESPONSIVENESS */
+@media screen and (max-width: 900px) {
+    .card {
+        flex-direction: column; /* Stack the image and text vertically */
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%; /* Both take full width when stacked */
+    }
+
+    .about-left {
+        /* Center the picture container on mobile */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: auto;
+    }
+
+    .picture-about {
+        max-width: 250px; /* Control the size of the image on mobile */
+    }
+
+    .card h1 {
+        text-align: center;
+    }
+}
+
+/* CARD FOR TECH STACK ICONS */
+#tech-stack {
+    /* background-color: #7C7C7C; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Use min-height: 50vh for the Tech Stack section as well */
+    min-height: 50vh;
+    height: auto; /* Allow height to expand for wrapping icons */
+    padding: 2rem 0; /* Add back vertical padding for breathing room */
+}
+
+/* Special styling for the tech stack card */
+.card.tech-card-mod {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* Icon Grid Container */
+.icon-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows icons to wrap to the next line */
+    justify-content: center;
+    gap: 3rem; /* Spacing between icon cards */
+    width: 100%;
+    max-width: 800px; /* Max width for the grid to keep it tidy */
+}
+
+/* Individual Icon Card */
+.icon-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Base width for the card (can be adjusted) */
+    text-align: center;
+    gap: 0.5rem;
+}
+
+/* Icon Image Styling */
+.icon-card img {
+    /* 1. Define a Fixed Size for a Uniform Look */
+    width: 60px; /* Set a specific, fixed width */
+    height: 60px; /* Set an equal, fixed height to force a square container */
+
+    /* 2. Control how the image fits within the fixed size */
+    object-fit: contain; 
+    /* 'contain' ensures the whole image is visible, scaling it down 
+       to fit within the 60px x 60px box without being cropped. */
+    
+    /* 3. Keep existing visual styles */
+    border-radius: 5px; /* Optional: adds a slight corner */
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-card img:hover {
+    transform: scale(1.1);
+}
+
+.icon-card p {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Adjustments for Tech Stack on Smaller Screens */
+
+@media screen and (max-width: 600px) {
+    .icon-grid {
+        gap: 1.5rem;
+    }
+    
+    .icon-card {
+        /* Reduce width to 55px on very small screens to fit more on one line */
+        width: 55px;
+    }
+
+    .icon-card img {
+        width: 50px;
+        height: 50px; 
+    }
+}
+
+/* NEW MEDIA QUERY FOR VERY SMALL SCREENS (e.g., small phones) */
+@media screen and (max-width: 400px) {
+    .icon-grid {
+        /* Reduce gap slightly more to help fit icons */
+        gap: 1rem;
+    }
+    
+    .icon-card {
+        /* Ensure the card is small enough to wrap correctly */
+        width: 50px;
+    }
+
+    .icon-card p {
+        /* Reduce text size slightly if needed for better wrapping */
+        font-size: 0.75rem;
+    }
+    
+    /* Important: Add padding to the top and bottom of the section on small screens 
+       to prevent the card content from touching the edges of the viewport
+       when the section height is auto */
+    #about,
+    #tech-stack {
+        padding: 1.5rem 0;
+    }
+}
