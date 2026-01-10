@@ -538,3 +538,267 @@ section{
         padding: 1.5rem 0;
     }
 }
+
+/* EXPERIENCE SECTION */
+#experiences{
+    /* background-color: #7C7C7C; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; 
+    height: auto; /* Allow height to expand if content is larger than 50vh */
+    padding: 2rem 0; /* Add back vertical padding for breathing room */
+    
+}
+
+#experiences .card{
+    background-color: #F1F2EB;
+    border-radius: 8px;
+
+    /* Adaptive Centering */
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #D64933;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Vertical line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #C9C9C9;
+}
+
+/* TIMELINE ITEM */
+.timeline-item {
+    position: relative;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* DOT */
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    background-color: #1E1E1E;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    top: 4px;
+}
+
+/* CONTENT CARD */
+.timeline-content {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.timeline-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1E1E1E;
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    color: #777;
+    display: block;
+    margin: 0.3rem 0 0.8rem;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+
+
+/* PROJECTS SECTION */
+#projects {
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-container {
+    width: 90%;
+    max-width: 1300px;
+}
+
+/* GRID */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* CARD */
+.project-card {
+    background-color: #F1F2EB;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE PLACEHOLDER */
+.project-image {
+    height: 180px;
+    background: linear-gradient(135deg, #E5E6DF, #D6D7D0);
+}
+
+/* CONTENT */
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1E1E1E;
+}
+
+.project-content p {
+    margin: 0.7rem 0 1rem;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* TAGS */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tags span {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #1E1E1E;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+
+
+
+
+/* FOOTER */
+#footer {
+    background-color: #F1F2EB; /* same as card bg */
+    padding: 2.5rem 1rem;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* LEFT */
+.footer-left h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1E1E1E;
+}
+
+.footer-left p {
+    margin: 0.3rem 0 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* CENTER LINKS */
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #1E1E1E;
+    position: relative;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #1E1E1E;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #F97316; /* orange hover */
+}
+
+
+/* RIGHT */
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+}
