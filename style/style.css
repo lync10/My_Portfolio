@@ -192,7 +192,7 @@ section{
 }
 
 .img-pic-profile{
-    height: 30vh;
+    /* height: 30vh; */ 
     width: 30vh;
     margin: auto 0;
     border-radius: 90%;
@@ -400,6 +400,11 @@ section{
 .about-right{
     width: 70%;
     padding: 0;
+}
+
+.about-right a{
+    color: #969696;
+    font-weight: 600;
 }
 
 /* CARD MOBILE RESPONSIVENESS */
@@ -666,7 +671,7 @@ section{
 
 /* PROJECTS SECTION */
 #projects {
-    padding: 4rem 1rem;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
 }
@@ -690,6 +695,7 @@ section{
     overflow: hidden;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -827,7 +833,7 @@ section{
 
 
 /* CIRCULAR SCROLL UP BUTTON */
-/* CIRCULAR SCROLL UP BUTTON */
+
 #scrollUpBtn {
     position: fixed;
     bottom: 2rem;
@@ -864,7 +870,7 @@ section{
 
 /* HOVER */
 #scrollUpBtn:hover {
-    background-color: #F97316;
+    background-color: #D64933;
 }
 
 /* BOLD ARROW */
@@ -884,3 +890,187 @@ section{
     border-color: #ffffff;
 }
 
+/* END OF ARROW BUTTON */
+
+
+/* START OF MODAL FOR PROJECTS */
+/* MODAL BACKDROP */
+.modal-shadow {
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease;
+}
+
+/* SHOW MODAL */
+.modal-shadow.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal-shadow .wrapper {
+    background-color: #F1F2EB;
+    border-radius: 8px;
+
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* MODAL CONTENT */
+.modal-content {
+    position: relative;
+}
+
+
+/* CLOSE BUTTON */
+/* CLOSE BUTTON – CIRCULAR */
+.close-btn {
+    justify-self: self-end;
+    margin: 10px;
+    /* position: absolute;
+    top: 1rem;
+    right: 1rem; */
+
+    width: 36px;
+    height: 36px;
+
+    background-color: transparent;
+    border: 0px solid #1E1E1E;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+/* ORANGE HOVER */
+.close-btn:hover {
+    background-color: #F97316;
+}
+
+/* DRAW THE X */
+.close-btn span {
+    position: relative;
+    width: 14px;
+    height: 14px;
+}
+
+.close-btn span::before,
+.close-btn span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 14px;
+    height: 2px;
+
+    background-color: #1E1E1E;
+    transform-origin: center;
+}
+
+.close-btn span::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn span::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+/* TEXT */
+.modal-title {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #1E1E1E;
+}
+
+.modal-description {
+    color: #555;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+/* TECH TAGS */
+.modal-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-tech span {
+    background-color: #ffffff;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ACTION BUTTONS */
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.modal-actions a {
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    background-color: #1E1E1E;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.modal-actions a:hover {
+    background-color: #F97316;
+}
+
+/* MODAL IMAGE GRID */
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-images img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #e5e5e5;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .modal-images {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-images img {
+        height: 180px;
+    }
+}
+
+/* END OF MODAL FOR PROJECTS */

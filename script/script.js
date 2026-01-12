@@ -6,6 +6,12 @@ function toggleMenu(){
 }
 
 
+
+
+
+
+
+
 // SCROLL UP BUTTON
 document.addEventListener("DOMContentLoaded", () => {
     const scrollUpBtn = document.getElementById("scrollUpBtn");
@@ -38,5 +44,57 @@ document.addEventListener("DOMContentLoaded", () => {
             top: 0,
             behavior: "smooth"
         });
+    });
+});
+
+
+
+const modal = document.getElementById("projectModal");
+const modalTitle = document.querySelector(".modal-title");
+const modalDescription = document.querySelector(".modal-description");
+const modalTech = document.querySelector(".modal-tech");
+const modalActions = document.querySelector(".modal-actions");
+const modalImages = document.querySelector(".modal-images");
+
+// OPEN MODAL
+function openModal(projectId) {
+    const project = projects.find(p => p.id === projectId);
+    if (!project) return;
+
+    // Fill modal content
+    modalTitle.textContent = `${project.title} (${project.subtitle})`;
+    modalDescription.textContent = project.description;
+    modalTech.innerHTML = project.tech
+        .map(tech => ` <span>${tech}</span>`)
+        .join("");
+
+    
+    modalImages.innerHTML = project.images
+        .map(img => `<img src="${img}" alt="${project.title} screenshot">`)
+        .join("");
+
+    // Show modal
+    modal.classList.add("active");
+}
+
+// CLOSE MODAL
+function closeModal() {
+    modal.classList.remove("active");
+}
+
+// CLOSE WHEN CLICKING BACKDROP
+modal.addEventListener("click", e => {
+    if (e.target === modal) closeModal();
+});
+
+document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeModal();
+});
+
+// ADD CLICK EVENTS TO PROJECT CARDS
+document.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const id = Number(card.dataset.id);
+        openModal(id);
     });
 });

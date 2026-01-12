@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
-    <script src="script/script.js"></script>
+    <script src="script/script.js" defer></script>
+    <script src="data/projects.js"></script>
     <link rel="stylesheet" href="style/style.css">
 
 <title>
@@ -24,7 +25,7 @@
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="#experiences">EXPERIENCES</a></li>
-                <li><a href="#contacts">CONTACTS</a></li>
+                <li><a href="#about">CONTACT</a></li>
             </ul> 
         </div>
     </nav>
@@ -41,14 +42,14 @@
                 <li><a href="#home" onclick="toggleMenu()">HOME</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">PROJECTS</a></li>
                 <li><a href="#experiences" onclick="toggleMenu()">EXPERIENCES</a></li>
-                <li><a href="#contacts" onclick="toggleMenu()">CONTACTS</a></li>
+                <li><a href="#about" onclick="toggleMenu()">CONTACT</a></li>
             </div>
         </div>
     </nav>
 
     <section id="profile">
         <div class="section_pic-container">
-            <img src="./assets/profile.jpeg" alt="Me" class="img-pic-profile">
+            <img src="./assets/profile.png" alt="Me" class="img-pic-profile">
         </div>
 
         <div class="section_text">
@@ -61,13 +62,13 @@
         <div class="btn-container">
             
         
-            <button class="pushable" onclick="window.open('./assets/SAMPLE_RESUME.pdf')">
+            <button class="pushable" onclick="window.open('./assets/myresume.pdf')">
                 <span class="shadow"></span>
                 <span class="edge"></span>
                 <span class="front">DOWNLOAD CV</span>
               </button>
 
-            <button class="pushable" onclick="location.href='#contacts'">
+            <button class="pushable" onclick="location.href='#about'">
                 <span class="shadow"></span>
                 <span class="edge"></span>
                 <span class="front">CONTACT INFO</span>
@@ -99,8 +100,8 @@
                 and using my creativity to solve problems and develop innovative solutions.</p>
 
                 <h1>CONTACT INFO</h1>
-            <p>Do you have a project in mind, you can reach me at
-                lyncdeveloper@gmail.com
+            <p>Do you have a project in mind? You can reach me at
+                <a href="mailto:lyncdeveloper@gmail.com">lyncdeveloper@gmail.com</a>
             </p>
             </div>
         </div>
@@ -147,18 +148,60 @@
                     <img src="./assets/icons/mysql.png" alt="MySQL Icon">
                     <p>MySQL</p>
                 </div>
+                <div class="icon-card">
+                    <img src="./assets/icons/next.png" alt="Next.js Icon">
+                    <p>Next.js</p>
+                </div>
+                <div class="icon-card">
+                    <img src="./assets/icons/tailwind.png" alt="Tailwind CSS Icon">
+                    <p>Tailwind CSS</p>
+                </div>
                 </div>
         </div>
     </section>
 
     
+
+
+<div class="modal-shadow" id="projectModal">
+    <div class="wrapper">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()" aria-label="Close modal">
+    <span></span>
+</button>
+
+<div class="modal-images"></div>
+
+            <h2 class="modal-title">Project Title</h2>
+            <p class="modal-description">
+                This project is a modern, responsive web application designed
+                to showcase clean UI, usability, and performance.
+            </p>
+
+            <div class="modal-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>MySQL</span>
+            </div>
+
+           <!-- <div class="modal-actions">
+                <a href="#" target="_blank">Live Demo</a>
+                <a href="#" target="_blank">GitHub</a>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+
+
 <section id="projects">
     <div class="projects-container">
         <h2 class="section-title">Projects</h2>
 
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image"></div>
+        <div class="projects-grid" >
+            <div class="project-card" data-id="1">
+                <div class="project-image"><img src="" alt=""></div>
                 <div class="project-content">
                     <h3>Bring Hope With a Smile (Donation Website)</h3>
                     <p>
@@ -174,7 +217,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-id="2">
                 <div class="project-image"></div>
                 <div class="project-content">
                     <h3>Flying Kicks (Shoe Selling E-commerce Website)</h3>
@@ -192,7 +235,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-id="3">
                 <div class="project-image"></div>
                 <div class="project-content">
                     <h3>Traversa Royale (Hotel Reservation Website)</h3>
@@ -210,7 +253,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-id="4">
                 <div class="project-image"></div>
                 <div class="project-content">
                     <h3>Fricz (Aircon Selling E-commerce Website)</h3>
@@ -222,8 +265,9 @@
                           <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
-                        <span>PHP</span>
-                        <span>mysql</span>
+                        <span>Next.js</span>
+                        <span>Postgresql</span>
+                        <span>Tailwind</span>
                     </div>
                 </div>
             </div>
@@ -291,6 +335,11 @@
 
 
 
+
+
+
+
+
 <footer id="footer">
     <div class="footer-container">
         <div class="footer-left">
@@ -303,7 +352,7 @@
                 <li id="homeBtn"><a href="#home">Home</a></li>
                 <li><a href="#experiences">Experiences</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">Contact</a></li>
             </ul>
         </div>
 
@@ -313,6 +362,14 @@
         </div>
     </div>
 </footer>
+
+
+
+
+
+
+
+
 
 
 <!-- SCROLL UP BUTTON -->
