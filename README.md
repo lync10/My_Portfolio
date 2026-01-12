@@ -23,24 +23,6 @@ This repository contains my personal web developer portfolio showcasing selected
 - CSS3
 - JavaScript (Vanilla)
 
----
-
-## 📂 Project Structure
-
-portfolio/
-├── index.html
-├── css/
-│ └── style.css
-├── script/
-│ └── script.js
-├── data/
-│ └── projects.js
-├── images/
-│ └── project screenshots
-└── README.md
-
----
-
 ## 📸 Featured Projects
 
 - **Bring Hope With a Smile** – Donation Website  
@@ -73,6 +55,3 @@ If you have a project in mind or would like to collaborate:
 
 ---
 
-## 📄 License
-
-This project is open-source and available under the MIT License.
