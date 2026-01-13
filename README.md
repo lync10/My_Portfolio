@@ -2,7 +2,7 @@
 
 This repository contains my personal web developer portfolio showcasing selected academic and personal projects. The portfolio highlights responsive design, clean UI/UX, and modern front-end development practices.
 
-🌐 **Live Site:** https://YOUR-USERNAME.github.io
+🌐 **Live Site:** https://lync10.github.io/My_Portfolio/
 
 ---
 
