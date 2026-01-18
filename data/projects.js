@@ -52,7 +52,7 @@ const projects = [
         title: "Fricz Airconditioning Services",
         subtitle: "Airconditioning Services Website",
         description:
-            "Fricz Airconditioning Services is a website for an airconditioning service company, developed using PHP, HTML, CSS, JavaScript, and MySQL.",
+            "Fricz Airconditioning Services is a modern service website built for an airconditioning company to showcase services, manage inquiries, and improve online presence. The project features a responsive and user-friendly interface, with dynamic content and data management powered by a robust backend and database. It was developed using HTML, CSS, JavaScript, Next.js, Tailwind CSS, and PostgreSQL, ensuring performance, scalability, and a smooth user experience across devices.",
         tech: ["HTML", "CSS", "JavaScript", "Next.js", "Postgresql", "Tailwind CSS"],
         images: [
             "assets/fricz/1.png",
